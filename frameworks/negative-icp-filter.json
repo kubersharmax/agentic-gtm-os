@@ -1,1 +1,88 @@
-
+{
+  "schema": "negative-icp-filter",
+  "version": "1.0.0",
+  "author": "Kuber Sharma (@kubersharmax)",
+  "description": "Onion-layer detection schema for filtering negative ICP signals in Agentic GTM pipelines.",
+  "onion_layers": [
+    {
+      "layer_id": "L1",
+      "name": "Legacy ETL Dependency",
+      "signal_keywords": ["batch ETL", "nightly sync", "cron-based ingestion", "flat-file export"],
+      "severity": "high",
+      "description": "Prospect relies on scheduled batch ETL for core data movement. Indicates deep legacy middleware investment."
+    },
+    {
+      "layer_id": "L2",
+      "name": "Middleware Lock-In",
+      "signal_keywords": ["MuleSoft", "TIBCO", "IBM DataStage", "Informatica PowerCenter", "custom ESB"],
+      "severity": "high",
+      "description": "Prospect is entrenched in heavyweight middleware that resists zero-copy patterns."
+    },
+    {
+      "layer_id": "L3",
+      "name": "Manual Data Wrangling",
+      "signal_keywords": ["Excel handoff", "CSV upload", "manual reconciliation", "copy-paste pipeline"],
+      "severity": "medium",
+      "description": "Data movement depends on human-in-the-loop manual steps rather than automated activation."
+    },
+    {
+      "layer_id": "L4",
+      "name": "Siloed Data Governance",
+      "signal_keywords": ["data request ticket", "IT-gated access", "30-day SLA for data", "committee approval"],
+      "severity": "medium",
+      "description": "Data access is bureaucratically gated, making real-time activation impossible."
+    },
+    {
+      "layer_id": "L5",
+      "name": "Legacy CRM/MAP Fragmentation",
+      "signal_keywords": ["Salesforce classic", "on-prem Dynamics", "Marketo batch sync", "HubSpot CSV import"],
+      "severity": "low",
+      "description": "GTM stack uses legacy or fragmented CRM/MAP integrations that resist modern data activation."
+    }
+  ],
+  "zero_copy_readiness_signals": [
+    {
+      "signal_id": "ZC1",
+      "name": "Cloud-Native Data Platform",
+      "indicators": ["Snowflake", "Databricks", "BigQuery", "Redshift", "Lakehouse"],
+      "weight": 3
+    },
+    {
+      "signal_id": "ZC2",
+      "name": "Reverse ETL / Data Activation",
+      "indicators": ["Census", "Hightouch", "RudderStack", "warehouse-native"],
+      "weight": 3
+    },
+    {
+      "signal_id": "ZC3",
+      "name": "Event-Driven Architecture",
+      "indicators": ["Kafka", "Pub/Sub", "event stream", "real-time pipeline", "webhook-first"],
+      "weight": 2
+    },
+    {
+      "signal_id": "ZC4",
+      "name": "Composable CDP",
+      "indicators": ["composable CDP", "warehouse-backed audiences", "identity resolution"],
+      "weight": 2
+    },
+    {
+      "signal_id": "ZC5",
+      "name": "API-First GTM Stack",
+      "indicators": ["headless CMS", "API-first CRM", "programmable workflows"],
+      "weight": 1
+    }
+  ],
+  "scoring": {
+    "onion_penalty": {
+      "high": -3,
+      "medium": -2,
+      "low": -1
+    },
+    "zero_copy_bonus_multiplier": 1.0,
+    "thresholds": {
+      "agentic_ready": 5,
+      "conditional": 0,
+      "negative_icp": -1
+    }
+  }
+}
