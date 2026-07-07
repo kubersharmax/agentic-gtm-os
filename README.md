@@ -1,104 +1,102 @@
-# 🧭 Agentic GTM Operating System (Ag-GTM OS)
+# Agentic GTM OS
 
-> **The transition from Generative AI to Agentic AI requires a shift from "Campaigns" to "Systems."**
+> Frameworks, models, and operating principles for taking AI agent products to market in enterprise contexts.
 
-This repository is the open-source logic layer for the **Agentic Shift** — a framework developed through 20 years of launching enterprise products at Microsoft, Salesforce, and UiPath.
-
-The frameworks here are not thought leadership. They are operating instructions.
+By [Kuber Sharma](https://kubersharma.com) — Senior Director of Product Marketing at UiPath. Twenty years marketing enterprise software at Microsoft, Salesforce, Tableau, and UiPath.
 
 ---
 
-## 🛠️ The $100M Pipeline Logic
+## What this is
 
-I architected this model to move beyond "Lead Gen" and into **Deterministic Growth** — a system where every GTM action is governed by data signals, agent logic, and human-in-the-loop approval gates.
+Enterprise AI is not a technology problem. It is a trust, governance, and go-to-market problem. The models work. The challenge is getting organizations to deploy them in production at scale.
 
-```mermaid
-graph TD
-    A[Unstructured Data] --> B{Agentic Filter}
-    B -- ICP Match --> C[Dynamic Messaging]
-    B -- No Match --> Z[Suppressed / Archived]
-    C --> D[Zero-Copy Activation]
-    D --> E[Automated Pipeline]
-    E --> F{Human-in-the-Loop}
-    F -- Approved --> G[Market Dominance]
-    F -- Rejected --> H[Re-Signal Queue]
-```
+This repo contains the frameworks I have developed and used across four companies and three technology eras of enterprise AI — from Azure Machine Learning in 2017 through Salesforce Einstein in 2020 to UiPath's agentic platform today.
+
+These are not academic models. Every one of them has been stress-tested against real enterprise sales cycles, real product launches, and real deployment failures.
 
 ---
 
-## 📁 Repository Structure
+## Frameworks
 
-```
-agentic-gtm-os/
-├── README.md                          ← You are here
-├── frameworks/
-│   ├── zero-copy-playbook.md          ← In-Situ Intelligence vs. ETL GTM
-│   ├── negative-icp-filter.json       ← The "Onion-Free" qualifier logic
-│   └── agentic-workflow-design.md     ← Human-in-the-Loop architecture
-├── templates/
-│   ├── signal-brief-template.md       ← Single-page signal-to-action doc
-│   └── pipeline-audit-template.md     ← Quarterly GTM audit framework
-└── secret-ops/
-    └── for-substack-readers-only.md   ← High-value prompt for Positioned readers
-```
+### [AMDA — Augmented Marketing Decision Architecture](frameworks/amda.md)
+
+A three-zone governance model for AI decision-making in enterprise marketing workflows. Classifies every AI-assisted decision by stakes and reversibility: AI-Primary, Collaborative, and Human-Primary.
+
+**Production data from 16 launches:**
+- 84% AI tool adoption rate (vs. near-zero under coercive governance)
+- 67% reduction in compliance violations
+- 34% improvement in time-to-market
+- Consensus cycles reduced from 3.8 to 1.6 rounds
+
+Full specification: [kubersharma.com/frameworks/amda](https://kubersharma.com/frameworks/amda)
 
 ---
 
-## 🔑 Core Principles
+### [The Pilot Trap](frameworks/pilot-trap.md)
 
-### 1. Signals Over Leads
-A lead is a guess. A signal is evidence. The Ag-GTM OS operates on signals — behavioral, firmographic, and technographic data processed by agents before a human ever sees a name.
+A five-stage model for why most enterprise AI never leaves proof-of-concept.
 
-### 2. Zero-Copy Activation
-Data should be activated *where it lives*, not where it's been moved. ETL pipelines are a $500M tax on GTM velocity. In-Situ Intelligence eliminates the bottleneck.
+Excitement. Scoping. Sandboxing. Stall. Abandonment. The trap springs at Sandboxing — when IT security, procurement, and legal arrive to the party nobody invited them to.
 
-### 3. Human-in-the-Loop at Every Gate
-Agentic systems don't replace judgment. They compress the time between signal and decision. Every high-stakes action in this OS has an explicit human approval gate.
-
-### 4. The Onion-Free Filter
-Named after my core operating principle: **strip every layer of fluff** until you reach the decision-relevant core. The filter removes:
-- Vanity metrics (impressions, open rates without conversion)
-- Non-ICP leads regardless of volume
-- Messaging that explains *what* without *why now*
+Full specification: [kubersharma.com/frameworks/pilot-trap](https://kubersharma.com/frameworks/pilot-trap)
 
 ---
 
-## 📐 The ICP Architecture
+### [The Trust Architecture](frameworks/trust-architecture.md)
 
-The Ideal Customer Profile in the Ag-GTM OS is not a persona card. It is a **probabilistic filter** with hard exclusions.
+A three-layer model for building enterprise buyer trust when the product does something buyers have never bought before.
 
-| Signal Layer | Data Source | Agent Action |
-|---|---|---|
-| Firmographic | Clearbit / 6sense | Score company fit |
-| Technographic | G2 / BuiltWith | Detect stack alignment |
-| Behavioral | Website / Product usage | Rank intent |
-| Temporal | CRM / Deal history | Assess timing |
-| **Negative ICP** | All sources | **Hard suppress** |
+Technical Trust, Operational Trust, Strategic Trust. Buyers evaluate bottom to top. Vendors pitch top to bottom. That is the mismatch.
 
-The `negative-icp-filter.json` in this repo is the technical implementation of the hard suppress logic.
+Full specification: [kubersharma.com/frameworks/trust-architecture](https://kubersharma.com/frameworks/trust-architecture)
 
 ---
 
-## 🔗 Deep Strategy & Dispatches
+### [The Belief Bridge](frameworks/belief-bridge.md)
 
-Weekly thinking on the Agentic Shift:
+A four-plank model for closing the GTM gap between what a product does and what a buyer believes it will do for them specifically.
 
-- **Website:** [kubersharma.com](https://kubersharma.com)
-- **Newsletter:** [Positioned on Substack](https://positioned.substack.com)
+Evidence. Analogy. Proof Point. Transfer. Most GTM motions build three planks. The fourth is the one vendors skip and the one buyers need.
 
----
-
-## 📜 Usage
-
-These frameworks are open-source for a reason: **the best ideas get pressure-tested in public**.
-
-If you use, fork, or adapt anything here:
-1. Star the repo so others can find it
-2. Reply to the relevant Positioned dispatch with your adaptation
-3. Tag me on LinkedIn — I engage with every serious practitioner who builds on this
+Full specification: [kubersharma.com/frameworks/belief-bridge](https://kubersharma.com/frameworks/belief-bridge)
 
 ---
 
-<div align="center">
-<sub>Built by Kuber Sharma · No ETL. No Onions. No Guessing.</sub>
-</div>
+## Writing
+
+The long-form thinking behind these frameworks lives at [kubersharma.com/writing](https://kubersharma.com/writing).
+
+Key essays:
+- [The agentic shift is a trust problem, not a technology problem](https://kubersharma.com/writing/agentic-shift-trust)
+- [The Pilot Trap: why 90% of enterprise AI never leaves the lab](https://kubersharma.com/writing/the-pilot-trap)
+- [AI Agents as GTM Copilots](https://kubersharma.com/writing/ai-agents-gtm-copilots) — published in [diginomica](https://diginomica.com/agentic-ai-not-one-size-fits-all-solution-agents-automation-human), May 2026
+- [Open Standards and the Agentic Enterprise](https://kubersharma.com/writing/mcp-open-standards)
+- [A positioning framework for enterprise B2B](https://kubersharma.com/writing/positioning-framework-enterprise-b2b)
+
+---
+
+## Reference Cards
+
+Printable single-page references for each framework, licensed CC BY-ND 4.0. Share and cite freely with attribution.
+
+[kubersharma.com/downloads](https://kubersharma.com/downloads)
+
+---
+
+## Academic work
+
+AMDA is currently under peer review at the *Journal of the Academy of Marketing Science* (JAMS).
+
+---
+
+## License
+
+Framework text and diagrams: [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/). Share freely with attribution. No derivatives.
+
+Code samples and reference implementations: MIT.
+
+---
+
+## Contact
+
+[kuber@kubersharma.com](mailto:kuber@kubersharma.com) · [kubersharma.com](https://kubersharma.com) · [LinkedIn](https://www.linkedin.com/in/kubersharma)
