@@ -1,0 +1,56 @@
+This repository is dual-licensed.
+
+================================================================================
+FRAMEWORK TEXT, DIAGRAMS, AND REFERENCE CARDS
+================================================================================
+
+Copyright (c) 2023-2026 Kuber Sharma
+
+Licensed under the Creative Commons Attribution-NoDerivatives 4.0
+International License (CC BY-ND 4.0).
+
+You are free to share, copy, and redistribute this material in any medium
+or format for any purpose, including commercially, provided you give
+appropriate credit to Kuber Sharma and link to https://kubersharma.com.
+
+You may not distribute modified versions of the framework text or diagrams.
+
+Full license text: https://creativecommons.org/licenses/by-nd/4.0/legalcode
+
+Applies to: all .md files in this repository, including everything under
+frameworks/.
+
+Suggested citation:
+
+  Sharma, K. (2026). The Augmented Marketing Decision Architecture (AMDA):
+  a three-zone taxonomy for human-AI decision authority in enterprise
+  marketing. Retrieved from https://kubersharma.com/frameworks/amda
+
+
+================================================================================
+CODE AND REFERENCE IMPLEMENTATIONS
+================================================================================
+
+MIT License
+
+Copyright (c) 2026 Kuber Sharma
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Applies to: run_onion_filter.py and any .json schema files.
