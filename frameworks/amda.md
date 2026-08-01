@@ -1,4 +1,4 @@
-# AMDA — Augmented Marketing Decision Architecture
+# AMDA, the Augmented Marketing Decision Architecture
 
 **Version 1.2** · By [Kuber Sharma](https://kubersharma.com) · Full specification at [kubersharma.com/frameworks/amda](https://kubersharma.com/frameworks/amda)
 
@@ -10,15 +10,15 @@ Most enterprise AI governance fails in one of two directions.
 
 The first failure is coercive governance: every AI output requires human review before use. Adoption collapses because the humans become the bottleneck. The system designed to make AI safe makes AI useless.
 
-The second failure is ungoverned autonomy: AI outputs flow directly into external channels without review. Compliance violations appear. Legal gets involved. The governance team intervenes and the coercive failure follows.
+The second failure is ungoverned autonomy: AI outputs flow directly into external channels without review. Compliance exceptions appear. Legal gets involved. The governance team intervenes and the coercive failure follows.
 
-AMDA solves this by classifying decisions rather than treating all AI decisions the same.
+AMDA addresses this by classifying decisions rather than treating all AI decisions the same.
 
 ---
 
 ## The framework
 
-Three zones, defined by decision stakes and reversibility:
+Three zones, defined by decision stakes and reversibility.
 
 ### Zone 1: AI-Primary
 
@@ -31,20 +31,20 @@ Three zones, defined by decision stakes and reversibility:
 
 **Examples:** First-pass copy drafts, internal research summaries, data categorization, initial competitive analysis
 
-**Governance:** AI acts. Log is kept. Periodic audit sample.
+**Governance:** AI acts. A log is kept. Periodic audit sample.
 
-**Typical volume:** ~70% of total AI decision volume in instrumented product marketing workflows.
+**Observed volume:** Roughly 70% of AI decision volume in the deployment described below. This is a classification of the decision types involved in those launches, not a universal benchmark.
 
 ---
 
 ### Zone 2: Collaborative
 
-**Definition:** Moderate-stakes decisions where AI drafts, human reviews before external output.
+**Definition:** Moderate-stakes decisions where AI drafts and a human reviews before external output.
 
 **Criteria:**
 - Output reaches external audiences (customers, press, partners, regulators)
 - Incorrect output carries reputational or compliance cost
-- Human review adds material value (not just rubber-stamp)
+- Human review adds material value rather than a rubber stamp
 
 **Examples:** Customer-facing messaging, press releases, regulatory filings, partner commitments, pricing communications
 
@@ -63,55 +63,67 @@ Three zones, defined by decision stakes and reversibility:
 
 **Examples:** M&A communications, executive positioning, legal filings, board materials, crisis response
 
-**Governance:** AI provides research and draft options. Human decides and executes.
+**Governance:** AI provides research and draft options. A named human decides and executes.
+
+Keep this zone small. If it is not small, decisions have been miscategorized.
 
 ---
 
 ## Classification questions
 
-When classifying a decision:
+Three questions, in order.
 
-1. **Who sees the output?** Internal only (Zone 1 candidate) vs. external audience (Zone 2 or 3).
-2. **What is the reversal cost?** Near-zero (Zone 1) vs. reputational/financial (Zone 2/3).
-3. **Whose career is affected if this goes wrong?** No one's specifically (Zone 1) vs. a named executive (Zone 3).
+1. **Can it be corrected if it is wrong?** Reversible decisions tolerate AI autonomy. Irreversible ones do not.
+2. **Who sees the output, and what follows?** Internal only points to Zone 1. Crossing a legal, executive, or external boundary pulls a decision up out of Zone 1.
+3. **How often does it happen?** High-frequency standardized decisions are where a per-output human gate is fatal to adoption. Low-frequency, high-consequence decisions can absorb human ownership without becoming a bottleneck.
 
 ---
 
-## Production data
+## Deployment results
 
-From 16 enterprise product launches under AMDA governance:
+Observed across 16 enterprise product launches in the product marketing function at Tableau, a Salesforce company, prior to 2025.
 
 | Metric | Result |
-|--------|--------|
-| AI tool adoption rate | 84% |
-| Compliance violation reduction | 67% |
-| Time-to-market improvement | 34% |
-| Messaging engagement lift | 47% |
-| Consensus cycles (before) | 3.8 rounds |
-| Consensus cycles (after) | 1.6 rounds |
+|---|---|
+| Adoption of the non-blocking AI compliance tool within six months | 84% (against near-zero for a functionally equivalent blocking tool in the same organization over the same period) |
+| Reduction in recorded messaging-compliance exceptions | 67% against the prior six-month baseline |
+| Time from brief sign-off to first external publication | 34% shorter |
+| Cross-functional consensus rounds per positioning decision | 3.8 down to 1.6 |
+| Lift in owned-channel content engagement | 47% |
+| Share of decision volume in the AI-Primary zone | Approximately 70% |
 
 ---
 
-## Version history
+## Methods and scope
 
-| Version | Change |
-|---------|--------|
-| v1.0 | Initial three-zone classification (2023) |
-| v1.1 | Added classification questions; formalized reversal cost as primary sort criterion |
-| v1.2 | Production data added from 16 launches; Zone 1 volume benchmark established |
+**Methods note:** These figures come from a single observational deployment at Tableau (Salesforce), prior to 2025. This is not a controlled study. Unit of analysis: individual product launches. The 84% adoption figure compares a non-blocking tool to a blocking equivalent in the same organization over the same period. Reduction in compliance exceptions was measured against the prior six-month baseline. Time-to-market improvement was measured from brief sign-off to first external publish. Consensus rounds reflect internal tracking of cross-functional review cycles. Engagement lift reflects content performance data from owned channels. The approximate 70% AI-Primary share is a classification of the decision types involved in these launches, not a universal benchmark. Results reflect one context and yours may differ. A fuller methods appendix is in progress.
+
+---
+
+## Provenance and version history
+
+Developed at Tableau (Salesforce) to solve a live governance problem in the product marketing function, then generalized and formalized. Further applied and refined at UiPath beginning in 2025.
+
+| Version | Date | Change |
+|---|---|---|
+| v1.0 | Pre-2025 | Developed at Tableau (Salesforce) across the product marketing function. Three zones, bounded-autonomy principle. Observed across 16 product launches. |
+| v1.1 | 2025 | Further applied and refined at UiPath. Formalized as a task-allocation taxonomy with the three classification questions. |
+| v1.2 | Jul 2026 | Published specification. Reference card issued. |
+
+---
+
+## Research status
+
+*The Human-AI Interface in Product Marketing: Frameworks for Augmented Decision-Making in Enterprise SaaS*, a manuscript developing AMDA into a formal taxonomy and evaluating its observational evidence, is under review at the *Journal of the Academy of Marketing Science*. Submitted July 29, 2026 to the AI-Driven Marketing special issue.
 
 ---
 
 ## Citation
 
-If you use AMDA in your work, please cite:
-
-> Sharma, K. (2023). AMDA: Augmented Marketing Decision Architecture. kubersharma.com/frameworks/amda.
-
-Academic paper under review: *Journal of the Academy of Marketing Science* (JAMS), 2026.
+> Sharma, K. (2026). *The Augmented Marketing Decision Architecture (AMDA): a three-zone taxonomy for human-AI decision authority in enterprise marketing.* Retrieved from https://kubersharma.com/frameworks/amda
 
 ---
 
 ## License
 
-[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/) — Share and cite with attribution. No derivatives.
+[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/). Share and cite with attribution. No derivatives.
