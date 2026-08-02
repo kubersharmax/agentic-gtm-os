@@ -44,10 +44,24 @@ The layers are sequential, not parallel. A buyer who has not received Technical 
 
 ## Where it came from
 
-A two-layer version originated at Microsoft in 2017, selling Azure Machine Learning to enterprises with no path to production. The third layer (Strategic Trust) became visible at Salesforce in 2020, watching a year of deals stall not on the model but on the executive sponsor's calendar. The full three-layer version has been in use at UiPath since 2022.
+A two-layer version originated at Microsoft in 2017, selling Azure Machine Learning to enterprises with no path to production. The third layer (Strategic Trust) became visible at Salesforce in 2020, watching a year of deals stall not on the model but on the executive sponsor's calendar. The full three-layer version has been in use at UiPath since I joined in October 2025.
+
+---
+
+## Reference card
+
+Printable single-page reference, CC BY-ND 4.0, no gate: [kubersharma.com/frameworks/trust-architecture-reference](https://kubersharma.com/frameworks/trust-architecture-reference)
+
+All four reference cards: [kubersharma.com/downloads](https://kubersharma.com/downloads)
+
+---
+
+## Citation
+
+> Sharma, K. (2026). *The Trust Architecture: a three-layer model of enterprise buyer trust in AI products.* Retrieved from https://kubersharma.com/frameworks/trust-architecture
 
 ---
 
 ## License
 
-[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/) — Share and cite with attribution. No derivatives.
+[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/). Share and cite with attribution. No derivatives.
