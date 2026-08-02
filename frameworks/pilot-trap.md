@@ -52,6 +52,20 @@ Named in October 2025, in an internal memo for a UiPath customer who had been ru
 
 ---
 
+## Reference card
+
+Printable single-page reference, CC BY-ND 4.0, no gate: [kubersharma.com/frameworks/pilot-trap-reference](https://kubersharma.com/frameworks/pilot-trap-reference)
+
+All four reference cards: [kubersharma.com/downloads](https://kubersharma.com/downloads)
+
+---
+
+## Citation
+
+> Sharma, K. (2026). *The Pilot Trap: a five-stage model of why enterprise AI stalls before production.* Retrieved from https://kubersharma.com/frameworks/pilot-trap
+
+---
+
 ## License
 
-[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/) — Share and cite with attribution. No derivatives.
+[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/). Share and cite with attribution. No derivatives.
