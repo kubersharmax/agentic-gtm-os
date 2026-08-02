@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: "Agentic GTM OS: frameworks for taking enterprise AI products to market"
+message: "If you use these frameworks in your work, please cite them as below."
+type: software
+authors:
+  - given-names: Kuber
+    family-names: Sharma
+    affiliation: UiPath
+    website: "https://kubersharma.com"
+repository-code: "https://github.com/kubersharmax/agentic-gtm-os"
+url: "https://kubersharma.com/frameworks"
+abstract: >-
+  Four practitioner frameworks for enterprise AI go-to-market, developed in
+  product marketing functions at Microsoft, Salesforce, Tableau, and UiPath.
+  The Augmented Marketing Decision Architecture (AMDA) allocates marketing
+  decisions between AI and humans by stakes. The Pilot Trap models why
+  enterprise AI stalls before production. The Trust Architecture models the
+  three layers of enterprise buyer trust. The Belief Bridge closes the gap
+  between what a product does and what a buyer believes it will do for them.
+keywords:
+  - product marketing
+  - enterprise AI
+  - AI governance
+  - go-to-market
+  - agentic AI
+  - human-AI decision authority
+license: CC-BY-ND-4.0
+version: "1.2"
+date-released: "2026-07-28"
+preferred-citation:
+  type: generic
+  title: "The Augmented Marketing Decision Architecture (AMDA): a three-zone taxonomy for human-AI decision authority in enterprise marketing"
+  authors:
+    - given-names: Kuber
+      family-names: Sharma
+      affiliation: UiPath
+  year: 2026
+  url: "https://kubersharma.com/frameworks/amda"
