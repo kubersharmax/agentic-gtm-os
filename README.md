@@ -24,7 +24,7 @@ Developed at Tableau (Salesforce) prior to 2025, further applied and refined at 
 
 Observational deployment results from 16 enterprise product launches in a single product marketing function. This is an observational deployment study, not a controlled experiment. Headline figures: 84% adoption of a non-blocking AI compliance tool within six months against near-zero for a functionally equivalent blocking tool in the same organization; 67% reduction in recorded messaging-compliance exceptions against the prior six-month baseline; 34% shorter time from brief sign-off to first external publication; cross-functional consensus rounds down from 3.8 to 1.6. Full methods and scope note in the [specification](frameworks/amda.md#methods-and-scope).
 
-Full specification: [kubersharma.com/frameworks/amda](https://kubersharma.com/frameworks/amda)
+Full specification: [kubersharma.com/frameworks/amda](https://kubersharma.com/frameworks/amda) · [Reference card](https://kubersharma.com/frameworks/amda-reference)
 
 ---
 
@@ -34,7 +34,7 @@ A five-stage model for why most enterprise AI never leaves proof-of-concept.
 
 Excitement. Scoping. Sandboxing. Stall. Abandonment. The trap springs at sandboxing, when IT security, procurement, and legal arrive to the party nobody invited them to.
 
-Full specification: [kubersharma.com/frameworks/pilot-trap](https://kubersharma.com/frameworks/pilot-trap)
+Full specification: [kubersharma.com/frameworks/pilot-trap](https://kubersharma.com/frameworks/pilot-trap) · [Reference card](https://kubersharma.com/frameworks/pilot-trap-reference)
 
 ---
 
@@ -44,7 +44,7 @@ A three-layer model for building enterprise buyer trust when the product does so
 
 Technical Trust, Operational Trust, Strategic Trust. Buyers evaluate bottom to top. Vendors pitch top to bottom. That is the mismatch.
 
-Full specification: [kubersharma.com/frameworks/trust-architecture](https://kubersharma.com/frameworks/trust-architecture)
+Full specification: [kubersharma.com/frameworks/trust-architecture](https://kubersharma.com/frameworks/trust-architecture) · [Reference card](https://kubersharma.com/frameworks/trust-architecture-reference)
 
 ---
 
@@ -54,7 +54,17 @@ A four-plank model for closing the gap between what a product does and what a bu
 
 Evidence. Analogy. Proof Point. Transfer. Most GTM motions build three planks. The fourth is the one vendors skip and the one buyers need.
 
-Full specification: [kubersharma.com/frameworks/belief-bridge](https://kubersharma.com/frameworks/belief-bridge)
+Full specification: [kubersharma.com/frameworks/belief-bridge](https://kubersharma.com/frameworks/belief-bridge) · [Reference card](https://kubersharma.com/frameworks/belief-bridge-reference)
+
+---
+
+## Playbook
+
+### [The Zero-Copy Revolution: a technical GTM playbook](frameworks/zero-copy-playbook.md)
+
+Not a fifth framework. An operating manual for running segmentation and activation logic inside the data warehouse rather than shuttling customer signals out to a marketing platform first.
+
+Covers the ETL tax, the architecture shift, and the ninety-day sequence. Pairs with the negative-ICP schema in `frameworks/negative-icp-filter.json`.
 
 ---
 
