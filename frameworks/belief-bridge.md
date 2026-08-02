@@ -6,7 +6,7 @@
 
 ## The problem
 
-Positioning is the art of changing what a buyer believes. Most positioning advice assumes the buyer can already picture the outcome. In enterprise AI, buyers cannot picture the outcome at all — because the outcome is something nobody has bought before.
+Positioning is the art of changing what a buyer believes. Most positioning advice assumes the buyer can already picture the outcome. In enterprise AI, buyers cannot picture the outcome at all, because the outcome is something nobody has bought before.
 
 You cannot describe your way across that gap. You have to build a bridge.
 
@@ -44,6 +44,20 @@ Named in 2022, in a hotel room in San Francisco the night before a Tableau Confe
 
 ---
 
+## Reference card
+
+Printable single-page reference, CC BY-ND 4.0, no gate: [kubersharma.com/frameworks/belief-bridge-reference](https://kubersharma.com/frameworks/belief-bridge-reference)
+
+All four reference cards: [kubersharma.com/downloads](https://kubersharma.com/downloads)
+
+---
+
+## Citation
+
+> Sharma, K. (2026). *The Belief Bridge: a four-plank model for closing the gap between product capability and buyer belief.* Retrieved from https://kubersharma.com/frameworks/belief-bridge
+
+---
+
 ## License
 
-[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/) — Share and cite with attribution. No derivatives.
+[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/). Share and cite with attribution. No derivatives.
