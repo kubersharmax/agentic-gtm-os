@@ -1,8 +1,8 @@
 # The Zero-Copy Revolution: A Technical GTM Playbook
 
-**Author:** Kuber Sharma, Senior Director — Platform Product Marketing, UiPath (Ex-Salesforce, Ex-Microsoft)
+**Author:** [Kuber Sharma](https://kubersharma.com), Senior Director of Product Marketing, UiPath. Previously Salesforce, Tableau, and Microsoft.
 **Repository:** `agentic-gtm-os/frameworks/zero-copy-playbook.md`
-**Status:** Active Framework · v1.0
+**Status:** Playbook · v1.0 · Companion to the four frameworks at [kubersharma.com/frameworks](https://kubersharma.com/frameworks)
 
 ---
 
@@ -12,7 +12,7 @@ For two decades, enterprise GTM operated on a simple (and deeply flawed) assumpt
 
 That assumption is now a competitive liability.
 
-**Zero-Copy GTM** is the practice of running intelligence, segmentation, and activation logic *in situ* — inside the data warehouse, without extraction. When your AI agents query Snowflake directly rather than syncing to a marketing platform, you eliminate the latency, the security surface, and the data decay that cripple traditional GTM.
+**Zero-Copy GTM** is the practice of running intelligence, segmentation, and activation logic *in situ*, inside the data warehouse, without extraction. When your AI agents query Snowflake directly rather than syncing to a marketing platform, you eliminate the latency, the security surface, and the data decay that cripple traditional GTM.
 
 This playbook is the operating manual for making that shift.
 
@@ -30,7 +30,7 @@ Traditional GTM data pipelines work like this:
 4. By the time a rep sees a signal, it's 24–72 hours old and partially stale
 5. The security team audits three more systems instead of one
 
-This is the ETL Tax. It's measured in time, security risk, and — most importantly — **precision loss**.
+This is the ETL Tax. It's measured in time, security risk, and, most importantly, **precision loss**.
 
 ---
 
@@ -41,7 +41,7 @@ This is the ETL Tax. It's measured in time, security risk, and — most importan
 | **Time-to-Value (TTV)** | 24–72 hours (sync lag) | Near real-time (query at signal time) |
 | **Data Freshness** | Stale at activation | Live at activation |
 | **Security Surface** | Data in N+1 systems | Data in 1 system |
-| **Security Friction** | High — multiple DPAs, audit logs | Low — single governance layer |
+| **Security Friction** | High, multiple DPAs, audit logs | Low, single governance layer |
 | **ICP Precision** | Segment-level (broad) | Record-level (exact) |
 | **Compliance Overhead** | Multiply by each destination tool | Contained to source warehouse |
 | **Infrastructure Cost** | Reverse-ETL licenses + MAP storage | Warehouse compute only |
@@ -71,7 +71,7 @@ sequenceDiagram
     Agent->>HITL: "Recommend outreach for 14 accounts. Review?"
     HITL-->>Agent: Approved (12 accounts) / Rejected (2 accounts)
     Agent->>CRM: Write task + context note for approved accounts only
-    Note over CRM: Only action metadata written to CRM — not the data itself.
+    Note over CRM: Only action metadata written to CRM, not the data itself.
 ```
 
 **What this diagram shows:**
@@ -138,9 +138,9 @@ Only records above threshold reach the Human-in-the-Loop gate.
 
 Zero-Copy GTM is not a product you buy. It's an architectural decision you make. It requires:
 
-1. **A centralized warehouse** (Snowflake, Databricks, BigQuery) — if your data is still in spreadsheets and siloed CRMs, start there
-2. **Agent infrastructure** with warehouse query capability — Cortex Analyst, Databricks AI, or custom tooling
-3. **Organizational will** to give GTM teams read access to the data warehouse — this is the political challenge, not the technical one
+1. **A centralized warehouse** (Snowflake, Databricks, BigQuery), if your data is still in spreadsheets and siloed CRMs, start there
+2. **Agent infrastructure** with warehouse query capability, Cortex Analyst, Databricks AI, or custom tooling
+3. **Organizational will** to give GTM teams read access to the data warehouse, this is the political challenge, not the technical one
 
 The technical implementation is straightforward. Getting your data governance team comfortable with "marketing agents in the warehouse" is the real 90-day project.
 
@@ -148,9 +148,10 @@ The technical implementation is straightforward. Getting your data governance te
 
 ## Further Reading
 
-- [Positioned (Substack)](https://positioned.substack.com) — Weekly dispatches on Agentic GTM
-- [kubersharma.com](https://kubersharma.com) — Strategic writing and advisory
-- [`negative-icp-filter.json`](../negative-icp-filter.json) — The technical implementation of Pass 1
+- [Positioned (Substack)](https://getpositioned.substack.com), Weekly dispatches on Agentic GTM
+- [kubersharma.com/frameworks](https://kubersharma.com/frameworks) : the four frameworks this playbook sits alongside
+- [kubersharma.com/writing](https://kubersharma.com/writing) : twenty-one essays on enterprise AI go-to-market
+- [`negative-icp-filter.json`](negative-icp-filter.json), The technical implementation of Pass 1
 
 ---
 
