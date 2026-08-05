@@ -26,6 +26,8 @@ Observational deployment results from 16 enterprise product launches in a single
 
 Full specification: [kubersharma.com/frameworks/amda](https://kubersharma.com/frameworks/amda) · [Reference card](https://kubersharma.com/frameworks/amda-reference)
 
+Run it: AMDA is packaged as a Claude skill at [kubersharmax/amda-skill](https://github.com/kubersharmax/amda-skill). Point it at a workflow and it returns the zone, the governance rule, and the failure mode if you get it wrong.
+
 ---
 
 ### [The Pilot Trap](frameworks/pilot-trap.md)
