@@ -3,16 +3,31 @@
 run_onion_filter.py â Agentic GTM Operating System
 ====================================================
 
-Production-ready Negative ICP Filter engine that ingests the
-negative-icp-filter.json schema and evaluates a prospect's
-Agentic Readiness score.
+Worked example, not a production system. Loads the
+negative-icp-filter.json schema and scores a prospect's
+Agentic Readiness against it, then runs a demonstration
+comparison on illustrative data.
+
+What this does NOT do: read real input, persist anything,
+keep an audit trail, or integrate with a CRM or warehouse.
+Matching is plain substring matching. Treat the output as
+an illustration of the scoring logic, not as a verdict.
+
+Scope:
+  Readiness is not fit. This scores DATA-STACK readiness for
+  zero-copy patterns. It is not an ICP assessment. A strong-fit
+  account can score low on a legacy stack, and a poor-fit account
+  can score high on a modern one. Pair it with ICP scoring.
 
 Core concepts:
   - Metaphorical Onions: Legacy ETL/middleware noise layers that
     signal a prospect is NOT ready for agentic, zero-copy GTM.
-  - Zero-Copy Data Activation: Modern data architecture patterns
-    (reverse ETL, event-driven, composable CDP) that indicate a
-    prospect IS ready for agentic workflows.
+  - Zero-Copy Data Activation: warehouse-centric patterns
+    (event-driven, composable CDP, in-situ query) that indicate a
+    prospect IS ready for agentic workflows. Reverse ETL scores
+    here too, but at low weight and deliberately so: it proves the
+    warehouse is the source of truth, while still shuttling copies
+    out to the CRM, which the playbook calls the ETL tax.
 
 Usage:
   python run_onion_filter.py
@@ -334,7 +349,8 @@ def run_mock_experiment(schema: dict) -> None:
     # --- Modern Prospect ---
     modern_signals = [
         "Data lives in Snowflake â single source of truth",
-        "Hightouch reverse ETL activates warehouse audiences in real-time",
+        "Agents query Snowflake directly, no extract step",
+        "Hightouch reverse ETL still syncing legacy MAP audiences",
         "Event stream via Kafka powers all downstream workflows",
         "Composable CDP built on warehouse-backed audiences",
         "API-first CRM with programmable workflows and webhooks",
