@@ -104,7 +104,7 @@ Printable single-page references for each framework, licensed CC BY-ND 4.0. Shar
 
 ## Research status
 
-*The Human-AI Interface in Product Marketing: Frameworks for Augmented Decision-Making in Enterprise SaaS*, a manuscript developing AMDA into a formal taxonomy and evaluating its observational evidence, is under review at the *Journal of the Academy of Marketing Science*. Submitted July 29, 2026 to the AI-Driven Marketing special issue.
+*The Human-AI Interface in Product Marketing: Frameworks for Augmented Decision-Making in Enterprise SaaS*, a manuscript developing AMDA into a formal taxonomy and evaluating its observational evidence, was submitted to the *Journal of the Academy of Marketing Science* in July 2026, to the AI-Driven Marketing special issue. Editorial decision pending.
 
 ---
 
