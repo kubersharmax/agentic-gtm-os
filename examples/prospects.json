@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Northwind Logistics",
+    "signals": [
+      "batch ETL",
+      "MuleSoft",
+      "Excel handoff",
+      "IT-gated access",
+      "Salesforce classic"
+    ]
+  },
+  {
+    "name": "Halcyon Bank",
+    "signals": [
+      "Snowflake",
+      "nightly sync",
+      "custom ESB",
+      "committee approval"
+    ]
+  },
+  {
+    "name": "Orion Media",
+    "signals": [
+      "Snowflake",
+      "Hightouch",
+      "Marketo batch sync",
+      "warehouse-backed audiences"
+    ]
+  },
+  {
+    "name": "Vantage Insurance",
+    "signals": [
+      "Databricks",
+      "reverse ETL",
+      "flat-file export",
+      "identity resolution"
+    ]
+  },
+  {
+    "name": "Kestrel AI",
+    "signals": [
+      "Databricks",
+      "Pub/Sub",
+      "real-time pipeline",
+      "composable CDP",
+      "headless CMS"
+    ]
+  }
+]
