@@ -1,0 +1,11 @@
+name,signal,signal,signal,signal,signal
+Northwind Logistics,batch ETL,MuleSoft,Excel handoff,IT-gated access,Salesforce classic
+Meridian Health,nightly sync,Informatica PowerCenter,data request ticket,30-day SLA for data
+Continental Retail,cron-based ingestion,CSV upload,Marketo batch sync,manual reconciliation
+Halcyon Bank,Snowflake,nightly sync,custom ESB,committee approval
+Orion Media,Snowflake,Hightouch,Marketo batch sync,warehouse-backed audiences
+Vantage Insurance,Databricks,reverse ETL,flat-file export,identity resolution
+Lumen Analytics,Snowflake,Census,composable CDP,API-first CRM
+Apex Fintech,BigQuery,Kafka,event stream,warehouse-native,programmable workflows
+Kestrel AI,Databricks,Pub/Sub,real-time pipeline,composable CDP,headless CMS
+Solstice SaaS,Redshift,RudderStack,identity resolution,webhooks
