@@ -72,13 +72,42 @@ Covers the ETL tax, the architecture shift, and the ninety-day sequence. Pairs w
 
 ## Reference implementation
 
-`run_onion_filter.py` is a worked example, not a production system. It scores a prospect's agentic readiness by matching stack signals against the negative-ICP schema in `frameworks/negative-icp-filter.json`, then runs a demonstration comparison between a legacy and a modern prospect using illustrative data.
+`run_onion_filter.py` scores a prospect's data-stack readiness against the schema in `frameworks/negative-icp-filter.json`. It takes real input.
+
+**Readiness is not fit.** This measures architecture, not ICP. A strong-fit account can score low on a legacy stack, and a poor-fit account can score high on a modern one. Pair it with your own ICP model, never substitute it.
+
+Score one prospect inline:
 
 ```bash
-python run_onion_filter.py
+python run_onion_filter.py --name "Acme Corp" --signals "Snowflake, nightly sync, MuleSoft"
 ```
 
-No dependencies beyond the standard library. Python 3.10 or later.
+Score a list from CSV or JSON:
+
+```bash
+python run_onion_filter.py --input prospects.csv
+python run_onion_filter.py --input prospects.json --json
+```
+
+CSV format, header optional:
+
+```
+name,signal,signal,signal
+NovaTech,Snowflake,Kafka,composable CDP
+Acme Corp,batch ETL,TIBCO,CSV upload
+```
+
+JSON format:
+
+```json
+[{"name": "NovaTech", "signals": ["Snowflake", "Kafka", "composable CDP"]}]
+```
+
+`--json` emits machine-readable output with every matched signal and its weight, so you can pipe it into your own scoring. Run `--help-format` for the input spec.
+
+The old illustrative comparison is still there behind `--demo`. It runs on made-up prospects and is for showing the mechanism, not for evaluating anyone.
+
+Matching is plain substring matching against the schema keywords, so it is a triage aid rather than an oracle. No persistence, no audit trail, no CRM integration. Standard library only, Python 3.10 or later.
 
 ---
 
