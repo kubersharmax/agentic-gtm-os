@@ -1,6 +1,6 @@
 # Architected by Kuber Sharma (@kubersharmax) | kubersharma.com
 """
-run_onion_filter.py â Agentic GTM Operating System
+run_onion_filter.py : Agentic GTM Operating System
 ====================================================
 
 Worked example, not a production system. Loads the
@@ -35,6 +35,8 @@ Usage:
 Repository: github.com/kubersharmax/agentic-gtm-os
 """
 
+import argparse
+import csv
 import json
 import os
 import sys
@@ -112,7 +114,7 @@ def load_schema(schema_path: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Onion Detection â "Peeling the Layers"
+# Onion Detection : "Peeling the Layers"
 # ---------------------------------------------------------------------------
 
 def detect_onion_layers(
@@ -265,7 +267,7 @@ def evaluate_prospect(
         summary_lines.append("Onion Layers Detected:")
         for d in onion_detections:
             summary_lines.append(
-                f"  [{d.severity.upper()}] {d.layer_name} â "
+                f"  [{d.severity.upper()}] {d.layer_name} : "
                 f"matched '{d.matched_keyword}' (penalty: {d.penalty})"
             )
     if zc_detections:
@@ -273,7 +275,7 @@ def evaluate_prospect(
         summary_lines.append("Zero-Copy Signals Detected:")
         for d in zc_detections:
             summary_lines.append(
-                f"  [+{d.weight}] {d.signal_name} â "
+                f"  [+{d.weight}] {d.signal_name} : "
                 f"matched '{d.matched_indicator}'"
             )
 
@@ -305,7 +307,7 @@ def print_evaluation(evaluation: ProspectEvaluation) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Mock Experiment â Legacy vs. Modern Prospect Comparison
+# Mock Experiment : Legacy vs. Modern Prospect Comparison
 # ---------------------------------------------------------------------------
 
 def run_mock_experiment(schema: dict) -> None:
@@ -327,10 +329,10 @@ def run_mock_experiment(schema: dict) -> None:
     # --- Legacy Prospect ---
     legacy_signals = [
         "Runs nightly batch ETL from on-prem Oracle to Salesforce Classic",
-        "MuleSoft handles all integrations â 200+ connectors deployed",
+        "MuleSoft handles all integrations : 200+ connectors deployed",
         "Marketing uses CSV upload to sync Marketo batch sync audiences",
         "Data team processes Excel handoff files every Monday morning",
-        "IT-gated access to customer data â 30-day SLA for data requests",
+        "IT-gated access to customer data : 30-day SLA for data requests",
         "IBM DataStage pipelines feed the data warehouse on a cron schedule",
         "Custom ESB layer sits between CRM and billing system",
     ]
@@ -341,14 +343,14 @@ def run_mock_experiment(schema: dict) -> None:
         schema=schema,
     )
 
-    print("[PROSPECT A] â The Onion")
+    print("[PROSPECT A] : The Onion")
     print(f"Signals fed into filter: {len(legacy_signals)}")
     print()
     print_evaluation(legacy_eval)
 
     # --- Modern Prospect ---
     modern_signals = [
-        "Data lives in Snowflake â single source of truth",
+        "Data lives in Snowflake : single source of truth",
         "Agents query Snowflake directly, no extract step",
         "Hightouch reverse ETL still syncing legacy MAP audiences",
         "Event stream via Kafka powers all downstream workflows",
@@ -364,7 +366,7 @@ def run_mock_experiment(schema: dict) -> None:
         schema=schema,
     )
 
-    print("[PROSPECT B] â Zero-Copy Native")
+    print("[PROSPECT B] : Zero-Copy Native")
     print(f"Signals fed into filter: {len(modern_signals)}")
     print()
     print_evaluation(modern_eval)
@@ -410,30 +412,167 @@ def run_mock_experiment(schema: dict) -> None:
 # Main Entry Point
 # ---------------------------------------------------------------------------
 
-def main() -> None:
-    """Load the schema, run the mock experiment, and exit."""
-    # Resolve schema path relative to this script's location
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    schema_path = os.path.join(
-        script_dir, "frameworks", "negative-icp-filter.json"
-    )
+def load_prospects(path: str) -> list:
+    """Read prospects from a real input file.
 
-    # Fallback: check same directory (for when script is run standalone)
-    if not os.path.exists(schema_path):
-        schema_path = os.path.join(script_dir, "negative-icp-filter.json")
+    Accepts either JSON or CSV.
+
+    JSON: [{"name": "Acme", "signals": ["Snowflake", "nightly sync"]}, ...]
+    CSV : one prospect per row, first column the name, remaining columns signals.
+          A header row is detected and skipped if the first cell is "name".
+
+    Returns:
+        List of (name, signals) tuples.
+
+    Raises:
+        FileNotFoundError: if the file does not exist.
+        ValueError: if the file cannot be parsed into prospects.
+    """
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Input not found: {path}")
+
+    if path.lower().endswith(".json"):
+        with open(path, "r", encoding="utf-8") as fh:
+            data = json.load(fh)
+        if not isinstance(data, list):
+            raise ValueError("JSON input must be a list of prospect objects")
+        out = []
+        for row in data:
+            if not isinstance(row, dict) or "signals" not in row:
+                raise ValueError("each prospect needs a 'signals' list")
+            out.append((row.get("name", "unnamed"), list(row["signals"])))
+        return out
+
+    with open(path, "r", encoding="utf-8", newline="") as fh:
+        rows = [r for r in csv.reader(fh) if r and any(c.strip() for c in r)]
+    if not rows:
+        raise ValueError("CSV input is empty")
+    if rows[0] and rows[0][0].strip().lower() == "name":
+        rows = rows[1:]
+    return [(r[0].strip(), [c.strip() for c in r[1:] if c.strip()]) for r in rows]
+
+
+def resolve_schema_path(explicit: str = "") -> str:
+    """Find the schema, preferring an explicit path."""
+    if explicit:
+        return explicit
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    candidate = os.path.join(script_dir, "frameworks", "negative-icp-filter.json")
+    if os.path.exists(candidate):
+        return candidate
+    return os.path.join(script_dir, "negative-icp-filter.json")
+
+
+def main() -> None:
+    """Score real prospects, or run the built-in demonstration."""
+    parser = argparse.ArgumentParser(
+        prog="run_onion_filter.py",
+        description=(
+            "Score a prospect's data-stack readiness for zero-copy, agentic GTM. "
+            "This measures architectural readiness only. It is NOT an ICP fit "
+            "assessment: a strong-fit account can score low on a legacy stack, "
+            "and a poor-fit account can score high on a modern one. Pair it with "
+            "your own ICP model."
+        ),
+    )
+    parser.add_argument(
+        "--input", "-i", metavar="FILE",
+        help="JSON or CSV file of prospects to score. See --help-format.",
+    )
+    parser.add_argument(
+        "--signals", "-s", metavar="TEXT",
+        help="Score a single prospect from a comma-separated signal list.",
+    )
+    parser.add_argument("--name", "-n", default="prospect",
+                        help="Name to label a --signals run.")
+    parser.add_argument("--schema", default="",
+                        help="Path to negative-icp-filter.json.")
+    parser.add_argument("--json", action="store_true",
+                        help="Emit machine-readable JSON instead of a report.")
+    parser.add_argument("--demo", action="store_true",
+                        help="Run the built-in comparison on illustrative data.")
+    parser.add_argument("--help-format", action="store_true",
+                        help="Show the expected input formats and exit.")
+    args = parser.parse_args()
+
+    if args.help_format:
+        print("JSON input:")
+        print('  [{"name": "Acme Corp", "signals": ["Snowflake", "nightly sync"]}]')
+        print()
+        print("CSV input (header optional):")
+        print("  name,signal,signal,...")
+        print("  Acme Corp,Snowflake,nightly sync,MuleSoft")
+        sys.exit(0)
 
     try:
-        schema = load_schema(schema_path)
+        schema = load_schema(resolve_schema_path(args.schema))
     except (FileNotFoundError, json.JSONDecodeError, ValueError) as exc:
         print(f"[ERROR] Failed to load schema: {exc}", file=sys.stderr)
         sys.exit(1)
 
-    print()
-    print("  Agentic GTM Operating System â Negative ICP Onion Filter")
-    print("  github.com/kubersharmax/agentic-gtm-os")
-    print()
+    prospects = []
+    if args.input:
+        try:
+            prospects = load_prospects(args.input)
+        except (FileNotFoundError, ValueError, json.JSONDecodeError) as exc:
+            print(f"[ERROR] {exc}", file=sys.stderr)
+            sys.exit(1)
+    elif args.signals:
+        prospects = [(args.name,
+                      [s.strip() for s in args.signals.split(",") if s.strip()])]
 
-    run_mock_experiment(schema)
+    if not prospects:
+        if not args.demo:
+            parser.print_help()
+            print()
+            print("No input given. Use --input, --signals, or --demo.",
+                  file=sys.stderr)
+            sys.exit(2)
+        print()
+        print("  Agentic Readiness Filter, demonstration on illustrative data")
+        print("  Not real prospects. Use --input to score your own.")
+        print("  github.com/kubersharmax/agentic-gtm-os")
+        print()
+        run_mock_experiment(schema)
+        sys.exit(0)
+
+    results = [evaluate_prospect(name, signals, schema)
+               for name, signals in prospects]
+
+    if args.json:
+        print(json.dumps([
+            {
+                "prospect": r.prospect_name,
+                "score": r.raw_score,
+                "classification": r.classification,
+                "onion_layers": [
+                    {"layer": d.layer_name, "matched": d.matched_keyword,
+                     "severity": d.severity, "penalty": d.penalty}
+                    for d in r.onion_detections
+                ],
+                "zero_copy_signals": [
+                    {"signal": d.signal_name, "matched": d.matched_indicator,
+                     "weight": d.weight}
+                    for d in r.zero_copy_detections
+                ],
+            }
+            for r in results
+        ], indent=2))
+        sys.exit(0)
+
+    print()
+    print("  Agentic Readiness Filter")
+    print("  Readiness is not fit. Pair with your own ICP model.")
+    print()
+    for r in results:
+        print_evaluation(r)
+
+    if len(results) > 1:
+        print_separator("~")
+        print(f"  {len(results)} prospects scored")
+        for r in results:
+            print(f"  {r.raw_score:>5}  {r.classification:<16} {r.prospect_name}")
+        print()
 
 
 if __name__ == "__main__":
