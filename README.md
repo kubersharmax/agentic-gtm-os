@@ -82,12 +82,25 @@ Score one prospect inline:
 python run_onion_filter.py --name "Acme Corp" --signals "Snowflake, nightly sync, MuleSoft"
 ```
 
-Score a list from CSV or JSON:
+Score a list from CSV or JSON. Two ready-to-run samples ship in `examples/`:
 
 ```bash
-python run_onion_filter.py --input prospects.csv
-python run_onion_filter.py --input prospects.json --json
+python run_onion_filter.py --input examples/prospects.csv
+python run_onion_filter.py --input examples/prospects.json --json
 ```
+
+The CSV sample holds ten prospects spanning legacy to modern and scores from -11 to +10, so you can see the classification boundaries move rather than guess at them:
+
+```
+  10 prospects scored
+    -11  NEGATIVE ICP     Northwind Logistics
+     -5  NEGATIVE ICP     Halcyon Bank
+      2  CONDITIONAL      Vantage Insurance
+      5  AGENTIC READY    Orion Media
+     10  AGENTIC READY    Kestrel AI
+```
+
+Halcyon Bank is the instructive row. It has Snowflake, which is the strongest positive signal in the schema, and still scores negative because nightly sync, a custom ESB and committee-gated data access outweigh it. A modern warehouse does not make an account ready.
 
 CSV format, header optional:
 
