@@ -114,7 +114,7 @@ Developed at Tableau (Salesforce) to solve a live governance problem in the prod
 
 ## Research status
 
-*The Human-AI Interface in Product Marketing: Frameworks for Augmented Decision-Making in Enterprise SaaS*, a manuscript developing AMDA into a formal taxonomy and evaluating its observational evidence, was submitted to the *Journal of the Academy of Marketing Science* in July 2026, to the AI-Driven Marketing special issue. Editorial decision pending.
+*The Human-AI Interface in Product Marketing: Frameworks for Augmented Decision-Making in Enterprise SaaS*, a manuscript developing AMDA into a formal taxonomy and evaluating its observational evidence, was submitted to *California Management Review* in August 2026. Editorial decision pending.
 
 ---
 
