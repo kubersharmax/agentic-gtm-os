@@ -81,7 +81,7 @@ Three questions, in order.
 
 ## Deployment results
 
-Observed across 16 enterprise product launches in the product marketing function at Tableau, a Salesforce company, prior to 2025.
+Observed across 16 enterprise product launches in the product marketing function of a large enterprise software company, prior to 2025.
 
 | Metric | Result |
 |---|---|
@@ -96,17 +96,17 @@ Observed across 16 enterprise product launches in the product marketing function
 
 ## Methods and scope
 
-**Methods note:** These figures come from a single observational deployment at Tableau (Salesforce), prior to 2025. This is not a controlled study. Unit of analysis: individual product launches. The 84% adoption figure compares a non-blocking tool to a blocking equivalent in the same organization over the same period. Reduction in compliance exceptions was measured against the prior six-month baseline. Time-to-market improvement was measured from brief sign-off to first external publish. Consensus rounds reflect internal tracking of cross-functional review cycles. Engagement lift reflects content performance data from owned channels. The approximate 70% AI-Primary share is a classification of the decision types involved in these launches, not a universal benchmark. Results reflect one context and yours may differ. A fuller methods appendix is in progress.
+**Methods note:** These figures come from a single observational deployment at a large enterprise software company, prior to 2025. This is not a controlled study. Unit of analysis: individual product launches. The 84% adoption figure compares a non-blocking tool to a blocking equivalent in the same organization over the same period. Reduction in compliance exceptions was measured against the prior six-month baseline. Time-to-market improvement was measured from brief sign-off to first external publish. Consensus rounds reflect internal tracking of cross-functional review cycles. Engagement lift reflects content performance data from owned channels. The approximate 70% AI-Primary share is a classification of the decision types involved in these launches, not a universal benchmark. Results reflect one context and yours may differ. A fuller methods appendix is in progress.
 
 ---
 
 ## Provenance and version history
 
-Developed at Tableau (Salesforce) to solve a live governance problem in the product marketing function, then generalized and formalized. Further applied and refined at UiPath beginning in 2025.
+Developed to solve a live governance problem in an enterprise product marketing function, then generalized and formalized. Further applied and refined at UiPath beginning in 2025.
 
 | Version | Date | Change |
 |---|---|---|
-| v1.0 | Pre-2025 | Developed at Tableau (Salesforce) across the product marketing function. Three zones, bounded-autonomy principle. Observed across 16 product launches. |
+| v1.0 | Pre-2025 | Developed across an enterprise product marketing function. Three zones, bounded-autonomy principle. Observed across 16 product launches. |
 | v1.1 | 2025 | Further applied and refined at UiPath. Formalized as a task-allocation taxonomy with the three classification questions. |
 | v1.2 | Jul 2026 | Published specification. Reference card issued. |
 
