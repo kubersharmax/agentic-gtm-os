@@ -20,7 +20,7 @@ This repository contains four frameworks developed in enterprise product marketi
 
 A three-zone governance model for AI decision-making in enterprise marketing workflows. Classifies every AI-assisted decision by stakes and reversibility: AI-Primary, Collaborative, Human-Primary.
 
-Developed at Tableau (Salesforce) prior to 2025, further applied and refined at UiPath from 2025.
+Developed in an enterprise product marketing function prior to 2025, further applied and refined at UiPath from 2025.
 
 Observational deployment results from 16 enterprise product launches in a single product marketing function. This is an observational deployment study, not a controlled experiment. Headline figures: 84% adoption of a non-blocking AI compliance tool within six months against near-zero for a functionally equivalent blocking tool in the same organization; 67% reduction in recorded messaging-compliance exceptions against the prior six-month baseline; 34% shorter time from brief sign-off to first external publication; cross-functional consensus rounds down from 3.8 to 1.6. Full methods and scope note in the [specification](frameworks/amda.md#methods-and-scope).
 
