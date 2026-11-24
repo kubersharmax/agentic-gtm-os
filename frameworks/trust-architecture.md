@@ -44,7 +44,7 @@ The layers are sequential, not parallel. A buyer who has not received Technical 
 
 ## Where it came from
 
-A two-layer version originated at Microsoft in 2017, selling Azure Machine Learning to enterprises with no path to production. The third layer (Strategic Trust) became visible at Salesforce in 2020, watching a year of deals stall not on the model but on the executive sponsor's calendar. The full three-layer version has been in use at UiPath since I joined in October 2025.
+A two-layer version originated at Microsoft in 2017, selling Azure Machine Learning to enterprises with no path to production. The third layer (Strategic Trust) became visible at Salesforce in 2021, watching a year of deals stall not on the model but on the executive sponsor's calendar. The full three-layer version has been in use at UiPath since I joined in October 2025.
 
 ---
 
