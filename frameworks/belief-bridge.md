@@ -54,7 +54,7 @@ All four reference cards: [kubersharma.com/downloads](https://kubersharma.com/do
 
 ## Citation
 
-> Sharma, K. (2026). *The Belief Bridge: a four-plank model for closing the gap between product capability and buyer belief.* Retrieved from https://kubersharma.com/frameworks/belief-bridge
+> Sharma, K. (2025). *The Belief Bridge: a four-plank model for closing the gap between product capability and buyer belief.* Retrieved from https://kubersharma.com/frameworks/belief-bridge
 
 ---
 
