@@ -62,7 +62,7 @@ All four reference cards: [kubersharma.com/downloads](https://kubersharma.com/do
 
 ## Citation
 
-> Sharma, K. (2026). *The Pilot Trap: a five-stage model of why enterprise AI stalls before production.* Retrieved from https://kubersharma.com/frameworks/pilot-trap
+> Sharma, K. (2025). *The Pilot Trap: a five-stage model of why enterprise AI stalls before production.* Retrieved from https://kubersharma.com/frameworks/pilot-trap
 
 ---
 
