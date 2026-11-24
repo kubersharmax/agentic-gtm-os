@@ -58,7 +58,7 @@ All four reference cards: [kubersharma.com/downloads](https://kubersharma.com/do
 
 ## Citation
 
-> Sharma, K. (2026). *The Trust Architecture: a three-layer model of enterprise buyer trust in AI products.* Retrieved from https://kubersharma.com/frameworks/trust-architecture
+> Sharma, K. (2025). *The Trust Architecture: a three-layer model of enterprise buyer trust in AI products.* Retrieved from https://kubersharma.com/frameworks/trust-architecture
 
 ---
 
